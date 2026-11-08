@@ -1,0 +1,100 @@
+/* CSS externo: variables */
+:root{--azul:#1b1f3b;--rosa:#d6246e;--ambar:#ffb400;--fondo:#f3f4fb;--radio:14px}
+/* Selector universal */
+*{box-sizing:border-box}
+/* Selector de elemento */
+body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;background:var(--fondo);color:var(--azul);line-height:1.6}
+/* Agrupación */
+h1,h2,h3{line-height:1.2}
+img{max-width:100%;height:auto;display:block}
+/* Selector de clase */
+.contenedor{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+/* Selector de id */
+#inicio{background:var(--azul);color:#fff}
+/* Maquetación 1: Flexbox */
+.cabecera{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:1rem;background:var(--azul)}
+.logo{color:#fff;font-size:1.6rem;font-weight:bold;text-decoration:none}
+.logo span{color:var(--ambar)}
+nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+/* Descendiente */
+nav a{color:#fff;text-decoration:none;padding:.3rem .6rem;border-radius:var(--radio)}
+nav a:hover,nav a:focus{background:var(--rosa)}
+nav a.activo{border-bottom:3px solid var(--ambar)}
+.categorias{display:flex;flex-wrap:wrap;gap:1rem}
+.cat{flex:1 1 220px;background:#fff;padding:1rem;border-left:6px solid var(--rosa);border-radius:var(--radio)}
+/* Hijo directo y pseudoclases estructurales */
+.ventajas>li{margin-bottom:.4rem}
+.ventajas>li:first-child{font-weight:bold}
+.ventajas>li:nth-child(even){color:var(--rosa)}
+.ventajas>li:last-child::after{content:" ✔"}
+/* Hermano adyacente y general */
+h2+p{font-size:1.1rem}
+h1~p{max-width:70ch}
+/* Pseudoelemento */
+.hero p::first-line{font-weight:bold}
+/* Atributo */
+a[target="_blank"]::after{content:" ↗"}
+a[href^="http"]{color:var(--rosa)}
+input[type="text"],input[type="email"],textarea{width:100%;padding:.5rem;margin-bottom:1rem;border:2px solid var(--azul);border-radius:8px}
+input:focus,textarea:focus{outline:3px solid var(--ambar)}
+.boton,.boton:visited{display:inline-block;background:var(--rosa);color:#fff;padding:.5rem 1rem;border-radius:var(--radio);text-decoration:none;border:0;font:inherit;cursor:pointer}
+.boton:hover{background:var(--ambar);color:var(--azul)}
+.aviso{background:#fff;border-left:6px solid var(--ambar);padding:1rem;margin-top:1rem}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:.6rem;border:1px solid var(--azul);text-align:left}
+tbody tr:nth-child(odd){background:var(--fondo)}
+th{background:var(--azul);color:#fff}
+/* Maquetación 2: CSS Grid (móvil: 1 columna) */
+.rejilla{display:grid;grid-template-columns:1fr;gap:1.2rem}
+.tarjeta{background:#fff;border-radius:var(--radio);padding:1rem;box-shadow:0 2px 8px rgba(27,31,59,.15)}
+/* Todas las imágenes del catálogo del mismo tamaño */
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+.tarjeta .plataforma{color:var(--rosa);font-weight:bold;margin:0}
+.tarjeta:hover{transform:translateY(-4px)}
+.precio{font-size:1.4rem;font-weight:bold}
+.pie{background:var(--azul);color:#fff;text-align:center;padding:1rem;margin-top:2rem}
+.pie a{color:var(--ambar)}
+/* Tableta: 2 columnas */
+@media (min-width:600px){.rejilla{grid-template-columns:repeat(2,1fr)}}
+/* Escritorio: 3 columnas */
+@media (min-width:992px){.rejilla{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:480px){nav ul{flex-direction:column;gap:.3rem}}
+/* Centrar el contenido principal de Charl Store */
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    text-align: center;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.hero .boton {
+    display: inline-block;
+    margin: 1rem auto;
+}
+/* Corregir color de los botones Ver más */
+a.boton,
+a.boton:link,
+a.boton:visited {
+    background-color: var(--rosa);
+    color: white;
+    text-decoration: none;
+}
+
+a.boton:hover,
+a.boton:focus {
+    background-color: var(--ambar);
+    color: var(--azul);
+}

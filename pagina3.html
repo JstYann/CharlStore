@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Historia, sedes y contacto de Charl Store.">
+  <title>Nosotros | Charl Store</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* CSS interno: estilos exclusivos de esta página */
+    #historia h1 { color: var(--rosa); border-bottom: 4px solid var(--ambar); padding-bottom: .3rem; }
+    table caption { font-weight: bold; margin-bottom: .5rem; }
+  </style>
+</head>
+<body>
+  <header class="cabecera">
+    <a class="logo" href="index.html">Charl<span>Store</span></a>
+    <nav aria-label="Menú principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="pagina3.html" class="activo">Nosotros</a></li></ul></nav>
+  </header>
+  <main class="contenedor">
+    <section id="historia">
+      <h1>Sobre Charl Store</h1>
+      <h2>Nuestra historia</h2>
+      <p>Charl nació como un club de intercambio de juegos en la Facultad de Ciencias Matemáticas y Físicas. Hoy es una tienda con asesoría real: te recomendamos según tu consola, tu presupuesto y tu tiempo de juego.</p>
+      <p>Cada producto se revisa antes de la entrega.</p>
+    </section>
+    <section id="sucursales">
+      <h2>Puntos de atención</h2>
+      <table>
+        <caption>Horarios de atención</caption>
+        <thead><tr><th>Sede</th><th>Zona</th><th>Horario</th></tr></thead>
+        <tbody>
+          <tr><td>Centro</td><td>Av. 9 de Octubre</td><td>Lun-Sáb 10h-19h</td></tr>
+          <tr><td>Norte</td><td>Alborada</td><td>Lun-Dom 11h-20h</td></tr>
+          <tr><td>Online</td><td>Todo Guayaquil</td><td>Siempre</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="#" method="get">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" required>
+        <label for="msg">Mensaje</label>
+        <textarea id="msg" name="msg" rows="4"></textarea>
+        <button class="boton" type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+    <aside class="aviso" id="faq">
+      <h2>Preguntas frecuentes</h2>
+      <p>¿Aceptan cambios? Sí, dentro de 7 días con el producto sellado.</p>
+      <p>¿Hacen envíos? Dentro de Guayaquil. Revisa el <a href="catalogo.html">catálogo</a>.</p>
+    </aside>
+  </main>
+  <footer class="pie">
+    <p>&copy; 2026 Charl Store, Guayaquil. Ilustraciones originales creadas para este proyecto; las marcas pertenecen a sus propietarios.</p>
+    <p>Visita <a href="https://www.ug.edu.ec/" target="_blank" rel="noopener">Universidad de Guayaquil</a>.</p>
+  </footer>
+</body>
+</html>
